@@ -4,14 +4,15 @@ from flask_cors import CORS
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 app = Flask(__name__)
 CORS(app)
-# Configure your API key
+
 api_key = os.getenv("API_KEY")
-genai.configure(api_key)
+genai.configure(api_key=api_key)
 
 
-# Set up a route to handle requests
 @app.route("/api/generate", methods=["POST"])
 def generate_response():
     data = request.json
@@ -28,6 +29,5 @@ def generate_response():
         return jsonify({"error": str(e)}), 500
 
 
-# Start the Flask server
 if __name__ == "__main__":
     app.run(debug=True)
