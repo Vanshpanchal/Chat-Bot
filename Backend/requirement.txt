@@ -1,0 +1,4 @@
+Flask==2.3.2
+flask-cors==3.0.10
+python-dotenv==1.0.0
+google-generative-ai==0.1.0  # Replace with the correct version if available
