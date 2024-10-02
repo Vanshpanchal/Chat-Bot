@@ -13,6 +13,7 @@ api_key = os.getenv("API_KEY")
 genai.configure(api_key=api_key)
 
 
+
 @app.route("/api/generate", methods=["POST"])
 def generate_response():
     data = request.json
