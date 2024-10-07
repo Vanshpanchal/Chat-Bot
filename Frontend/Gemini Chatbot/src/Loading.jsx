@@ -6,9 +6,9 @@ const Loading = () => {
   return (
     <div className="text-center">
       <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
+        <span className="visually-hidden">Analyzing...</span>
       </Spinner>
-      <p>Loading...</p>
+      <p>Analyzing...</p>
     </div>
   );
 };
